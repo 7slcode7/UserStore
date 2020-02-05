@@ -1,0 +1,25 @@
+.NameTagContainer{
+    font-size: medium;
+    border-radius: 5px;
+    border: rebeccapurple  solid 5px;
+    padding: 5px;
+    margin: 10px;
+    float: left;
+}
+
+.detailContainer{
+    font-size: medium;
+}
+
+.NameTagContainer h1 {
+    text-align: center;
+}
+
+.NameTagContainer:hover{
+    border: rgb(191, 5, 247)  solid 5px;
+    background-color: rgb(17, 179, 2);
+}
+
+.detailContainer:hover{
+    font-size: 20px;
+}

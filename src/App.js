@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from './Components/NavBar';
+import './Components/NavBar.css';
+import NameTag from './Components/NameTag';
+import UserStoreButton from './Components/UserStoreButton'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar></NavBar>
+      <div>
+        <UserStoreButton name="Add User"></UserStoreButton>
+        <UserStoreButton name="Update User"></UserStoreButton>
+        <UserStoreButton name="Delete User"></UserStoreButton>
+      </div>
+      <div className="NameTagHolder">AAA
+        <NameTag name="Lahiru" fullName="Lahiu Chandima" dob="1994.11.07" address="No 23, Reid Avenue, Colombo 6"></NameTag>
+        <NameTag name="Lahiru" fullName="Lahiu Chandima" dob="1994.11.07" address="No 23, Reid Avenue, Colombo 6"></NameTag>
+      </div>
     </div>
   );
 }
