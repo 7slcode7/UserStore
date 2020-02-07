@@ -1,4 +1,6 @@
 .NameTagHolder{
+  width: 100%;
   float: left;
-  clear: both;
+  clear: both;font-size: 35px;
+  margin: 5px 0px 5px 45px;
 }

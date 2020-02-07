@@ -1,10 +1,25 @@
 import React from 'react';
-import './UserStoreButton.css'
+import UserAdditionForm from './UserAdditionForm.js';
 
-const UserStoreButton = (props) => (
-    <div>
-        <button className="UserStoreButton">{props.name}</button> 
-    </div>
-);
+import './UserStoreButton.css'
+import { render } from '@testing-library/react';
+
+const UserStoreButton = (props) => {
+
+    function displayUserAddition(name) {
+        if (name === "Add User") {
+            render(<UserAdditionForm></UserAdditionForm>)
+        }
+    }
+
+    return (
+        <div>
+            <button className="UserStoreButton" onClick={()=>displayUserAddition(props.name)}>
+            {props.name}
+            </button> 
+        </div>
+    );
+    
+};
 
 export default UserStoreButton; 

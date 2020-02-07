@@ -4,7 +4,7 @@
     border: rebeccapurple  solid 5px;
     padding: 5px;
     margin: 10px;
-    float: left;
+    float: left;  
 }
 
 .detailContainer{
@@ -16,8 +16,8 @@
 }
 
 .NameTagContainer:hover{
-    border: rgb(191, 5, 247)  solid 5px;
-    background-color: rgb(17, 179, 2);
+    border: rgb(93, 218, 93)  solid 5px;
+    background-color: rgb(174, 184, 173);
 }
 
 .detailContainer:hover{

@@ -3,8 +3,12 @@ import NavBar from './Components/NavBar';
 import './Components/NavBar.css';
 import NameTag from './Components/NameTag';
 import UserStoreButton from './Components/UserStoreButton'
+import './App.css'
+
+
 
 function App() {
+
   return (
     <div>
       <NavBar></NavBar>
@@ -13,10 +17,11 @@ function App() {
         <UserStoreButton name="Update User"></UserStoreButton>
         <UserStoreButton name="Delete User"></UserStoreButton>
       </div>
-      <div className="NameTagHolder">AAA
-        <NameTag name="Lahiru" fullName="Lahiu Chandima" dob="1994.11.07" address="No 23, Reid Avenue, Colombo 6"></NameTag>
-        <NameTag name="Lahiru" fullName="Lahiu Chandima" dob="1994.11.07" address="No 23, Reid Avenue, Colombo 6"></NameTag>
+      <div className="NameTagHolder">Current Users
       </div>
+        <NameTag name="Lahiru" fullName="Lahiu Chandima" dob="1994.11.07" address="No 23, Reid Avenue, Colombo 6"></NameTag>
+        <NameTag name="Lahiru" fullName="Lahiu Chandima" dob="1994.11.07" address="No 23, Reid Avenue, Colombo 6"></NameTag>
+      
     </div>
   );
 }
