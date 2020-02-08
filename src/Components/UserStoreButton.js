@@ -1,5 +1,5 @@
 import React from 'react';
-import UserAdditionForm from './UserAdditionForm.js';
+import UserAdditionForm    from './UserAdditionForm.js';
 
 import './UserStoreButton.css'
 import { render } from '@testing-library/react';
