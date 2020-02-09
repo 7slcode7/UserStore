@@ -2,13 +2,14 @@ import React from 'react';
 import UserAdditionForm    from './UserAdditionForm.js';
 
 import './UserStoreButton.css'
-import { render } from '@testing-library/react';
+
 
 const UserStoreButton = (props) => {
 
     function displayUserAddition(name) {
         if (name === "Add User") {
-            render(<UserAdditionForm></UserAdditionForm>)
+            window.alert("Test");
+            return <UserAdditionForm></UserAdditionForm>
         }
     }
 

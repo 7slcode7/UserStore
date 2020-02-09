@@ -2,16 +2,17 @@ import React from 'react';
 import './UserAdditionForm.css'
 
 
+function closeForm() {
+    window.alert("AA");
+    document.getElementById("coverElement").style.display = "none";
+}
 
-const UserAdditionForm = () => {
-    function closeForm() {
-        document.getElementById("coverElement").style.display = "none";
-    }
-
+function UserAdditionForm  () {
+    window.alert("Hello 2");
     return (
         <div id="coverElement" onClick={closeForm}>
             <div id="myForm">
-                <button className="Reset" onClick={closeForm}>X</button>
+                <button className="Reset" onClick={closeForm} type="button">X</button>
                 <form action="" className="form-container">
                     <h1>User Details</h1>
                     <br></br>
