@@ -6,6 +6,7 @@
     opacity: 95%;
     z-index: 0;
     padding: 20px;
+    display: none;
 }
 #myForm{
     background-color: #4CAF50;
@@ -17,7 +18,7 @@
     z-index: 2;
     margin-left: 25%;
     margin-right: 25%;
-    margin-top: 5%;
+    margin-top: 2%;
     opacity: 1;
     font-size: 25px;
 

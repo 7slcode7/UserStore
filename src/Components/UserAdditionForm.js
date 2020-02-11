@@ -3,12 +3,11 @@ import './UserAdditionForm.css'
 
 
 function closeForm() {
-    window.alert("AA");
     document.getElementById("coverElement").style.display = "none";
 }
 
+
 function UserAdditionForm  () {
-    window.alert("Hello 2");
     return (
         <div id="coverElement" onClick={closeForm}>
             <div id="myForm">

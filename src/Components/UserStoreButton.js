@@ -1,21 +1,18 @@
 import React from 'react';
-import UserAdditionForm    from './UserAdditionForm.js';
 
 import './UserStoreButton.css'
 
+function displayUserAddition(name , elementName) {
+    if (name === "Add User") {
+        document.getElementById(elementName).style.display = "block";
+    }
+}
 
 const UserStoreButton = (props) => {
 
-    function displayUserAddition(name) {
-        if (name === "Add User") {
-            window.alert("Test");
-            return <UserAdditionForm></UserAdditionForm>
-        }
-    }
-
     return (
         <div>
-            <button className="UserStoreButton" onClick={()=>displayUserAddition(props.name)}>
+            <button className="UserStoreButton" onClick={()=>displayUserAddition(props.name , props.elementName)}>
             {props.name}
             </button> 
         </div>
