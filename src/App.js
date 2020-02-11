@@ -1,14 +1,15 @@
 import React from 'react';
 import NavBar from './Components/NavBar';
-import './Components/NavBar.css';
 import NameTag from './Components/NameTag';
 import UserStoreButton from './Components/UserStoreButton'
-import './App.css'
 import UserAdditionForm from './Components/UserAdditionForm';
+import Data from './Components/Data'
 
-
+import './App.css'
+import './Components/NavBar.css';
 
 function App() {
+
 
   return (
     <div>
@@ -20,8 +21,17 @@ function App() {
       </div>
       <div className="NameTagHolder">Current Users
       </div>
-        <NameTag name="Lahiru" fullName="Lahiu Chandima" dob="1994.11.07" address="No 23, Reid Avenue, Colombo 6"></NameTag>
-        <NameTag name="Lahiru" fullName="Lahiu Chandima" dob="1994.11.07" address="No 23, Reid Avenue, Colombo 6"></NameTag>
+        <div>
+        {
+          Data.map((userData, index) => 
+            <NameTag
+              fullName={userData.name}
+              dob={userData.dob}
+              address={userData.address}
+            ></NameTag>
+          )
+        }
+        </div>
         <UserAdditionForm></UserAdditionForm>
     </div>
   );
