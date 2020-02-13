@@ -1,58 +1,69 @@
 import React from 'react';
 import './UserAdditionForm.css'
-import Data from './Data'
 
 
-function closeForm() {
-    document.getElementById("coverElement").style.display = "none";
-}
+class UserAdditionForm extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            edited: false
+        }
+    }
 
-function addData(){
-    
-    var name = document.getElementById("name").nodeValue;    
-    var dob = document.getElementById("dob").nodeValue;  
-    var address = document.getElementById("address").nodeValue;  
+    alldata = this.props.dataElement;
 
-    var dataToInsert = { "name" : name , "dob" : dob , "address" : address};
-    Data.push(dataToInsert);
-    window.alert(Data);
-}
+    addData(data) {
+        window.alert(JSON.stringify(data));
+        // var name = document.getElementById("name").value;
+        // var dob = document.getElementById("dob").value;
+        // var address = document.getElementById("address").value;
+        // window.alert("SSS");
+        // var dataToInsert = '{ "name": "Pathum Sampath" , "dob": "10/11/2020" , "address": "No 23, Reid Avenue, Colombo 6"}';
+        // window.alert("DDD");
+        //  dataToInsert =  JSON.parse(dataToInsert);
+        //  window.alert("SSFFS");
+       
+        var feed = {"name": "Pathum Sampath","dob": "10/11/2020","address": "No 23, Reid Avenue, Colombo 6>>>>>>>"};
+        this.props.dataElement.users.push(feed);
+        // data.users.push(feed);
+        window.alert("After pushing:" + JSON.stringify(data) );
 
-function UserAdditionForm  () {
-    return (
-        <div id="coverElement">
-            <div id="myForm">
-                <button className="Reset" onClick={closeForm} type="button">X</button>
-                <form action="" className="form-container">
-                    <h1>User Details</h1>
-                    <br></br>
-                    <label><b>Name</b></label>
-                    <input type="text" placeholder="Enter Full Name" id="name" required></input>
-                    <br></br>
-                    <label><b>Date of birth</b></label>
-                    <input type="text" placeholder="Enter date of birth" id="dob" required></input>
-                    <br></br>
-                    <label><b>Address</b></label>
-                    <input type="text" placeholder="Enter address" id="address" required></input>
-                    <br></br> <br></br>
-                    <button type="submit" className="Add" onClick={addData}>Add User</button>
-                </form>
+        // console.log(data);
+        // window.alert("XXXX");
+        // window.alert(JSON.stringify(data));
+    }
+
+    closeForm() {
+        document.getElementById("coverElement").style.display = "none";
+
+    }
+
+
+
+    render() {
+        return (
+            <div id="coverElement">
+                <div id="myForm">
+                    <button className="Reset" onClick={this.closeForm} type="button">X</button>
+                    <form action="" className="form-container">
+                        <h1>User Details</h1>
+                        <br></br>
+                        <label><b>Name</b></label>
+                        <input type="text" placeholder="Enter Full Name" id="name" required></input>
+                        <br></br>
+                        <label><b>Date of birth</b></label>
+                        <input type="text" placeholder="Enter date of birth" id="dob" required></input>
+                        <br></br>
+                        <label><b>Address</b></label>
+                        <input type="text" placeholder="Enter address" id="address" required></input>
+                        <br></br> <br></br>
+                        <button type="submit" className="Add" alldata={this.props.dataElement} onClick={() => this.addData(this.alldata)}>Add User</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    );
+        )
+    }
 }
-
-// class UserAdditionForm extends React.Component{
-//     componentDidUpdate(){
-//         return<App></App>
-//     }
-//     render(){
-//         return(
-            
-//         )
-//     }
-// }
-
 export default UserAdditionForm;
 
 
