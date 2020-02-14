@@ -11,7 +11,7 @@ function displayUserAddition(name , elementName) {
 const UserStoreButton = (props) => {
     return (
         <div>
-            <button className="UserStoreButton" onClick={()=>displayUserAddition(props.name , props.elementName)}>
+            <button type="button" className="UserStoreButton" onClick={()=>displayUserAddition(props.name , props.elementName)}>
             {props.name}
             </button> 
         </div>
