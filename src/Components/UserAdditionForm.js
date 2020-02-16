@@ -3,24 +3,37 @@ import './UserAdditionForm.css'
 
 
 class UserAdditionForm extends React.Component {
+    constructor(props){
+        super(props);
+        this.name = null;
+        this.address = null;
+        this.dob = null;
+    }
 
     alldata = this.props.dataElement;
-
-    
 
     closeForm() {
         document.getElementById("coverElement").style.display = "none";
 
     }
 
+    onSubmitCloseForm = () => {
+        document.getElementById("coverElement").style.display = "none";
 
+    }
+
+    nameInput = () => {
+        this.name = document.getElementById("name").value;
+        this.address = document.getElementById("address").value;
+        this.dob = document.getElementById("dob").value;
+    }
 
     render() {
         return (
             <div id="coverElement">
                 <div id="myForm">
                     <button className="Reset" onClick={this.closeForm} type="button">X</button>
-                    <form action="" className="form-container">
+                    <form className="form-container">
                         <h1>User Details</h1>
                         <br></br>
                         <label><b>Name</b></label>

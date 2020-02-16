@@ -25,16 +25,21 @@ class App extends React.Component {
         ]
       }
     }
+    this.formRef = React.createRef();
   }
 
   addData() {
-    var feed = { "name": "Pathum Sampath", "dob": "10/11/2020", "address": "No 23, Reid Avenue, Colombo 6>>>>>>>" };
+
+    this.formRef.current.nameInput();
+    var feed = { "name": this.formRef.current.name, "dob": this.formRef.current.dob, "address": this.formRef.current.address };
     var copyData = this.state.mainData;
     copyData.users.push(feed);
     this.setState({
       mainData: copyData,
     }
     )
+    this.formRef.current.onSubmitCloseForm();
+
     // window.alert("After pushing:" + JSON.stringify(this.state.mainData));
   }
 
@@ -54,6 +59,7 @@ class App extends React.Component {
 
 
 
+
   render() {
     return (
 
@@ -70,7 +76,7 @@ class App extends React.Component {
         <div>
           {this.displayNameTags()}
         </div>
-        <UserAdditionForm dataElement={this.state.mainData} onClick={() => this.addData()} style={{display:"none"}}></UserAdditionForm>
+        <UserAdditionForm dataElement={this.state.mainData} onClick={() => this.addData()} ref={this.formRef}></UserAdditionForm>
       </div>
     );
   }
