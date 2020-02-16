@@ -3,6 +3,7 @@ import NavBar from './Components/NavBar';
 import NameTag from './Components/NameTag';
 import UserStoreButton from './Components/UserStoreButton'
 import UserAdditionForm from './Components/UserAdditionForm';
+import Clock from './Components/Clock'
 
 import './App.css'
 import './Components/NavBar.css';
@@ -64,7 +65,8 @@ class App extends React.Component {
     return (
 
       <div>
-        <NavBar></NavBar>
+        <NavBar>
+        </NavBar>
         <div>
           {console.log("Before passing :" + JSON.stringify(this.state.mainData))}
           <UserStoreButton name="Add User" elementName="coverElement"></UserStoreButton>
