@@ -3,7 +3,6 @@ import NavBar from './Components/NavBar';
 import NameTag from './Components/NameTag';
 import UserStoreButton from './Components/UserStoreButton'
 import UserAdditionForm from './Components/UserAdditionForm';
-import Clock from './Components/Clock'
 
 import './App.css'
 import './Components/NavBar.css';
