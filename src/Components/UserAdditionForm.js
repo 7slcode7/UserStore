@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserAdditionForm.css'
 
-
+// Class Component for user addition form.
 class UserAdditionForm extends React.Component {
     constructor(props){
         super(props);
