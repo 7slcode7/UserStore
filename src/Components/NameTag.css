@@ -1,3 +1,4 @@
+/* NameTag Container CSS Styles */
 .NameTagContainer{
     font-size: medium;
     border-radius: 5px;
@@ -7,6 +8,7 @@
     float: left;  
 }
 
+/* DetailContainer CSS Styles */
 .detailContainer{
     font-size: medium;
 }
